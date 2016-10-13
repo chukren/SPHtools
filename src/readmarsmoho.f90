@@ -18,8 +18,8 @@
   !real*8,  parameter :: step = 1.0d0/30.0   ! 2 minute
   !integer, parameter :: nlat = 5400         ! 180 
   !integer, parameter :: nlon = 10800        ! 360 
-  !=== 6 minite resolution ===
-  real*8,  parameter :: step = 1.0d0/6.0     ! 6 minute
+  !=== 10 minite resolution ===
+  real*8,  parameter :: step = 1.0d0/6.0     ! 10 minute
   integer, parameter :: nlat = 1080          ! 180 * 60
   integer, parameter :: nlon = 2160          ! 360 * 60
   !=== half degree resolution ===
