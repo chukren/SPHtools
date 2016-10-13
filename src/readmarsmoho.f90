@@ -171,8 +171,8 @@
       !ielev = IDNINT(elev-R_areoid)
       !write(100,1991) ielev
 
-      thick_km = ( topo(i,j) - moho(i,j) ) / 1000.d0   
-      write(101,1995) lon, lat, topo(i,j), moho(i,j), thick_km
+      thick_km = topo(i,j) - moho(i,j)   
+      write(101,1995) lat, lon, topo(i,j), moho(i,j), thick_km
 
       !R_ell = (R_areoid - R_MARS) / 1000.d0
       !write(102,1990) lon,lat,R_ell
@@ -181,7 +181,7 @@
   enddo
 
 1990 format(F9.2,F9.2,F8.2)
-1995 format(F9.2,F9.2,F13.2,F13.2,F9.2)
+1995 format(F12.5,F12.5,F16.4,F16.4,F16.4)
 1991 format(I10)
 
   deallocate(topo_cilm)
